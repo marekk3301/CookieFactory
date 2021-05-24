@@ -1,0 +1,84 @@
+
+body {
+    background-color: lightpink;
+}
+
+.start {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.name {
+    width: 200px;
+}
+
+.play {
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    color: darkblue;
+}
+
+.play:hover {
+    background-color: lightblue;
+    cursor: pointer;
+    color: deeppink;
+}
+
+.form__element {
+    display: inline-block;
+}
+
+.board {
+    position: absolute;
+    width: 450px;
+    height: 426px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*animation: in .5s ease-in, out .5s 3s ease-in;*/
+}
+
+.shadow {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    box-shadow: 0 0 150px 150px rgba(255,255,255,0.6);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cookieImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 450px;
+    height: 426px;
+}
+
+.result {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    z-index: 10;
+    transform: translateY(400px);
+}
+
+
+
+
+/*@-webkit-keyframes in{*/
+/*    from {opacity: 0;}*/
+/*    to {opacity: 1;}*/
+/*}*/
+/*@-webkit-keyframes out{*/
+/*    from {opacity: 1;}*/
+/*    to {opacity: 0;}*/
+/*}*/
