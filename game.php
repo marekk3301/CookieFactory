@@ -1,8 +1,9 @@
 <?php
 //session_start();
+include_once 'Cookie.php';
 include 'functions.php';
 
-$_SESSION['turns'] = 0; //deklaruje zmienna do liczenia rund
+
 
 
 //$mleko = 1;
@@ -11,7 +12,7 @@ $ciasta = $_SESSION['ciasta'];
 $polewy = $_SESSION['polewy'];
 $dodatki = $_SESSION['dodatki'];
 
-var_dump($_SESSION['ordered']);
+echo $_SESSION['ordered'];
 
 ?>
 

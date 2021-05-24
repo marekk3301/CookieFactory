@@ -1,14 +1,20 @@
 <?php
+include_once 'Cookie.php';
 include 'functions.php';
 
 //tu generuje sie ciasteczko zmowione przez klienta
-$_SESSION['ordered'] = getRandCookie();
+$cookie = new Cookie();
+$cookie->getRandCookie();
+$_SESSION['ordered'] = $cookie->toString();
+
+
 ?>
 
 <html lang="">
 <head><link rel="stylesheet" href="style.css"></head>
 <body>
-<div class="board"><div class="shadow"></div><?php drawBoard($_SESSION['ordered'])?> </div>
+
+<div class="board"><div class="shadow"></div><?php drawBoard($cookie)?> </div>
 </body>
 </html>
 
