@@ -24,6 +24,6 @@ $_SESSION['ordered'] = $cookie->toString();
 
 
 $delay = calculateDelay($_SESSION['difficulty']);
-echo $delay;
+//echo $delay;
 
 header( "refresh:$delay;url=game.php" );

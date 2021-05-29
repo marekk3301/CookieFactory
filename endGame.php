@@ -1,3 +1,4 @@
 <?php
-echo "Congrats!<br> Points: " . $_SESSION['points']
+session_start();
+echo "Congrats!<br> Points: " . $_SESSION['points'];
 ?>

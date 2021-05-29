@@ -10,9 +10,9 @@ include 'functions.php';
     <form class="start" method="post" action="index.php">
         <input class="username" type="text" placeholder="username" name="username"><br>
         <input class="maxTurns" type="number" min="1" max="50" step="1" value="5" name="maxTurns"><br>
-        <label><input class="difficulty" type="radio" value="easy" name="difficulty">Łatwy</label><br>
-        <label><input class="difficulty" type="radio" value="medium" name="difficulty">Średni</label><br>
-        <label><input class="difficulty" type="radio" value="hard" name="difficulty">Trudny</label><br><br>
+        <label><input class="difficulty" type="radio" value="easy" name="difficulty" required>Łatwy</label><br>
+        <label><input class="difficulty" type="radio" value="medium" name="difficulty" required>Średni</label><br>
+        <label><input class="difficulty" type="radio" value="hard" name="difficulty" required>Trudny</label><br><br>
         <input class="play" type="submit" value="play" name="play">
     </form>
 
@@ -21,7 +21,7 @@ include 'functions.php';
         setcookie("test", "test", time()+15);           //ciasteczko testowe - nie można grac bez wlaczonych ciasteczek
 
         $_SESSION['username'] = $_POST['username'];     //nazwa użytkownika
-        $_SESSION['maxTurns'] = $_POST['maxTurns'];     //ilość rund
+        $_SESSION['maxTurns'] = $_POST['maxTurns'] - 1; //ilość rund
 
         switch ($_POST['difficulty']) {
             case 'easy':

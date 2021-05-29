@@ -1,5 +1,4 @@
 <?php
-//session_start();
 include 'functions.php';
 
 compareCookies($_SESSION['ordered'], $_COOKIE['freshCookie']);

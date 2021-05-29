@@ -1,17 +1,14 @@
 <?php
-//session_start();
 include_once 'Cookie.php';
 include 'functions.php';
 
 echo "<h1 style='text-align: end; font-size: 50px'> Runda: " . $_SESSION['turns'] + 1 . "</h1>";
 
-//$mleko = 1;
-
 $ciasta = $_SESSION['ciasta'];
 $polewy = $_SESSION['polewy'];
 $dodatki = $_SESSION['dodatki'];
 
-echo $_SESSION['ordered'];
+//echo $_SESSION['ordered'];
 
 ?>
 
@@ -48,17 +45,9 @@ echo $_SESSION['ordered'];
                 echo "<label><input type='radio' name='dodatek' value=$dodatki[$i]> $dodatki[$i]</label><br>";
             }
             ?>
-        </div>
-        <div class="form__element milk">
-            <label><input type="checkbox" name="mleko" value="1">Mleko</label>
-        </div><br>
+        </div> <br>
         <input class="form__submit" type="submit" value="Gotowe" name="submit">
     </form>
 </div>
-
-<?php
-
-?>
-
 </body>
 </html>

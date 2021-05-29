@@ -3,21 +3,20 @@
 
 class Cookie
 {
-    private $ciasto, $polewa, $dodatek, $mleko;
+    private $ciasto, $polewa, $dodatek;
 
     /**
      * cookie constructor.
      * @param $ciasto
      * @param $polewa
      * @param $dodatek
-     * @param $mleko
      */
-    public function __construct($ciasto = "", $polewa = "", $dodatek = "", $mleko = 0)
+    public function __construct($ciasto = "", $polewa = "", $dodatek = "")
     {
         $this->ciasto = $ciasto;
         $this->polewa = $polewa;
         $this->dodatek = $dodatek;
-        $this->mleko = $mleko;
+
     }
 
     public function getRandCookie()
@@ -26,7 +25,6 @@ class Cookie
         $this->ciasto = $_SESSION['ciasta'][rand(0, sizeof($_SESSION['ciasta']) - 1)];
         $this->polewa = $_SESSION['polewy'][rand(0, sizeof($_SESSION['polewy']) - 1)];
         $this->dodatek = $_SESSION['dodatki'][rand(0, sizeof($_SESSION['dodatki']) - 1)];
-        $this->mleko = rand(0, 1);
 
     }
 
@@ -80,26 +78,9 @@ class Cookie
         $this->dodatek = $dodatek;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getMleko()
-    {
-        return $this->mleko;
-    }
-
-    /**
-     * @param mixed $mleko
-     */
-    public function setMleko($mleko)
-    {
-        $this->mleko = $mleko;
-    }
 
     public function toString()
     {
-        return "$this->ciasto;$this->polewa;$this->dodatek;$this->mleko";
+        return "$this->ciasto;$this->polewa;$this->dodatek";
     }
-
-
 }
