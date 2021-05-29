@@ -17,4 +17,3 @@ if (isset($_POST['submit'])) {
 
 }
 
- //Fatal error: Uncaught Error: Call to a member function getCiasto() on array in C:\Users\Marekk3301\PhpstormProjects\Cookies Game\functions.php:21 Stack trace: #0 C:\Users\Marekk3301\PhpstormProjects\Cookies Game\results.php(62): drawBoard(Array) #1 {main} thrown in C:\Users\Marekk3301\PhpstormProjects\Cookies Game\functions.php on line 21

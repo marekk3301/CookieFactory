@@ -2,7 +2,7 @@
 include_once 'Cookie.php';
 include 'functions.php';
 
-$_SESSION['turns'] += 1;
+incrementTurns($_SESSION['maxTurns']);
 
 header( "refresh:3.5;url=order.php" );
 ?>
@@ -21,5 +21,3 @@ header( "refresh:3.5;url=order.php" );
 ?>
 </body>
 </html>
-
-

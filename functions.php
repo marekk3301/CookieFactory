@@ -6,8 +6,7 @@ $_SESSION['ciasta'] = ['owsiane', 'czekoladowe', 'piernik'];
 $_SESSION['polewy'] = ['none', 'malinowa', 'czekoladowa', 'waniliowa', 'toffee'];
 $_SESSION['dodatki'] = ['none', 'posypka', 'orzeszki', 'żurawina', 'rodzynki', 'czekoladki', 'cukier', 'wisienka'];
 
-$_SESSION['turns'] = 0; //deklaruje zmienna do liczenia rund
-$_SESSION['points']; //deklaruje zmienna do liczenia punktów
+
 
 $ciasta = $_SESSION['ciasta'];
 $polewy = $_SESSION['polewy'];
@@ -19,6 +18,34 @@ $dodatki = $_SESSION['dodatki'];
 //        'dodatek' => $_SESSION['dodatki'][rand(0,sizeof($_SESSION['dodatki'])-1)], 'mleko' => rand(0,1)];
 //    return $cookie;
 //}
+
+function incrementTurns($maxTurns) {
+    if ($_SESSION['turns'] >= $maxTurns) {
+        header("Location : endGame.php");
+    }
+    else {
+        $_SESSION['turns'] += 1;
+    }
+}
+
+function calculateDelay($difficulty) {
+    switch ($difficulty) {
+        case 1:
+            $a = 5.5;
+            $b = 0.9;
+            break;
+        case 2:
+            $a = 5.5;
+            $b = 0.87;
+            break;
+        case 3:
+            $a = 4;
+            $b = 0.86;
+            break;
+    }
+
+    return round($a*pow($b,$_SESSION['turns']),2);
+}
 
 function drawBoard($cookie) {
     $ciasto = $cookie->getCiasto();
