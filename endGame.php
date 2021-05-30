@@ -9,6 +9,7 @@
     session_start();
     echo "<h4>Good Job " . $_SESSION['username'] . "!</h4><br>";
     echo "You've got <b>" . $_SESSION['points'] . '</b> points<br><br>';
+    session_destroy();
     ?>
     <a href="index.php"><input class="restart" type="submit" value="restart now" name="restart"></a>
 </div>

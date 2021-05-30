@@ -8,6 +8,8 @@ echo "</h1>";
 
 echo "<h1 class='turn'> Runda: ";
 echo $_SESSION['turns'] + 1;
+echo "/";
+echo $_SESSION['maxTurns'] + 1;
 echo "</h1>";
 
 $ciasta = $_SESSION['ciasta'];

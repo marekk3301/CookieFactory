@@ -15,11 +15,16 @@ include 'functions.php';
 <?php
     drawBoard($_SESSION['freshCookie']);
     if ($_SESSION['result'] == 1) {
-        echo '"Delicious😋"';
+        echo "<p class='result'> 'Mniam😋' </p></div>";
         addPoints(calculateDelay($_SESSION['difficulty']));
     }
     else {
-        echo '"That is not what I ordered!🤬"';
+        $cookie = explode(";", $_SESSION['ordered']);
+        echo "<p class='result'> 'To nie moje zamówienie!🤬' </p>";
+        echo "<p style='transform: translateY(400px);'>czy to wygląda jak " . $cookie[0];
+        if($cookie[1] != 'none'){echo " z polewa " . $cookie[1];}
+        if($cookie[2] != 'none'){echo " i " . $cookie[2];}
+        echo "</p></div>";
     }
 
     incrementTurns($_SESSION['maxTurns']);

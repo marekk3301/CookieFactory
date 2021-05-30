@@ -8,6 +8,8 @@ echo "</h1>";
 
 echo "<h1 class='turn'> Runda: ";
 echo $_SESSION['turns'] + 1;
+echo "/";
+echo $_SESSION['maxTurns'] + 1;
 echo "</h1>";
 
 //tu generuje sie ciasteczko zmowione przez klienta
