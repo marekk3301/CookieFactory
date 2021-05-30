@@ -1,20 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=VT323&display=swap');
 
 body {
     background-color: lightpink;
+    font-family: 'Roboto', sans-serif;
 }
 
 .start {
     position: absolute;
+    width: 500px;
+    height: 200px;
+    background-color: darkgrey;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 2;
+    border: 3px solid rgba(255,255,255,0.7);
+    border-right-color: rgba(0,0,0,0.7);
+    border-bottom-color: rgba(0,0,0,0.7);
+    box-shadow: 0 0 0 2px darkgrey;
+    /*box-shadow: 4px 4px 0 0 rgba(0,0,0,0.7), -4px -4px 0 -2px rgba(255,255,255,0.7);*/
 }
 
 .name {
     width: 200px;
 }
 
-.play {
+/*.play {
     width: 200px;
     height: 60px;
     font-size: 20px;
@@ -28,9 +40,25 @@ body {
     background-color: lightblue;
     cursor: pointer;
     color: deeppink;
+}*/
+
+input[type='radio']:checked {
+    color: black;
 }
 
+h1 {
+    position: absolute;
+    font-family: 'VT323', monospace;
+    font-size: 60px;
+}
 
+.points {
+    left: 25px;
+}
+
+.turn {
+    right: 25px;
+}
 
 .factory {
     position: relative;
@@ -43,16 +71,22 @@ body {
     max-width: 100%;
 }
 
-.factory__form h4{
-    margin-top: 0;
-    margin-bottom: 25px;
+.factory__form h4,
+.start h4,
+h4 {
     padding: 0 10px;
+    margin: 3px;
+    margin-bottom: 25px;
+    line-height: 2;
+    text-align: left;
     color: white;
     background-color: blue;
+    /*font-family: 'VT323', monospace;*/
 }
 
 .factory__form label{
     margin-left: 10px;
+    text-transform: capitalize;
 }
 
 .form__element {
@@ -65,8 +99,11 @@ body {
     background-color: darkgrey;
     text-align: left;
     line-height: 2;
-    box-shadow: 2px 2px 3px 0 rgba(0,0,0,0.7);
-    padding: 4px;
+    border: 2px solid white;
+    border-right-color: black;
+    border-bottom-color: black;
+    box-shadow: 0 0 0 1px darkgrey;
+    /*box-shadow: 4px 4px 0 0 rgba(0,0,0,0.7), -4px -4px 0 -2px rgba(255,255,255,0.7);*/
 }
 
 .milk {
@@ -77,9 +114,17 @@ body {
 
 }
 
-.form__submit {
-    margin-top: 50px;
-    padding: 10px;
+.form__submit,
+.play,
+.restart  {
+    width: 90px;
+    margin-top: 10px;
+    padding: 3px 0;
+    background-color: darkgrey;
+    font-size: 14px;
+    border: 2px solid white;
+    border-right-color: black;
+    border-bottom-color: black;
 }
 
 .board {
@@ -89,7 +134,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /*animation: in .5s ease-in, out .5s 3s ease-in;*/
 }
 
 .shadow {
@@ -120,14 +164,17 @@ body {
     transform: translateY(400px);
 }
 
-
-
-
-/*@-webkit-keyframes in{*/
-/*    from {opacity: 0;}*/
-/*    to {opacity: 1;}*/
-/*}*/
-/*@-webkit-keyframes out{*/
-/*    from {opacity: 1;}*/
-/*    to {opacity: 0;}*/
-/*}*/
+.centered {
+    position: absolute;
+    width: 500px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: darkgrey;
+    border: 2px solid white;
+    border-right-color: black;
+    border-bottom-color: black;
+    box-shadow: 0 0 0 1px darkgrey;
+}

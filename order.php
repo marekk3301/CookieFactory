@@ -2,7 +2,13 @@
 include_once 'Cookie.php';
 include 'functions.php';
 
-echo "<h1 style='text-align: end; font-size: 50px'> Runda: " . $_SESSION['turns'] + 1 . "</h1>";
+echo "<h1 class='points'> Punkty: ";
+echo $_SESSION['points'];
+echo "</h1>";
+
+echo "<h1 class='turn'> Runda: ";
+echo $_SESSION['turns'] + 1;
+echo "</h1>";
 
 //tu generuje sie ciasteczko zmowione przez klienta
 $cookie = new Cookie();

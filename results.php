@@ -14,8 +14,13 @@ include 'functions.php';
 
 <?php
     drawBoard($_SESSION['freshCookie']);
-    $result = $_SESSION['result'] == 1 ? '"Delicious😋"' : '"That is not what I ordered!🤬"';
-    echo "<p class='result'> $result </p></div>";
+    if ($_SESSION['result'] == 1) {
+        echo '"Delicious😋"';
+        addPoints(calculateDelay($_SESSION['difficulty']));
+    }
+    else {
+        echo '"That is not what I ordered!🤬"';
+    }
 
     incrementTurns($_SESSION['maxTurns']);
 ?>

@@ -8,12 +8,13 @@ include 'functions.php';
     </head>
     <body>
     <form class="start" method="post" action="index.php">
+        <h4>CookieFactory.exe</h4>
         <input class="username" type="text" placeholder="username" name="username"><br>
-        <input class="maxTurns" type="number" min="1" max="50" step="1" value="5" name="maxTurns"><br>
-        <label><input class="difficulty" type="radio" value="easy" name="difficulty" required>Łatwy</label><br>
-        <label><input class="difficulty" type="radio" value="medium" name="difficulty" required>Średni</label><br>
-        <label><input class="difficulty" type="radio" value="hard" name="difficulty" required>Trudny</label><br><br>
-        <input class="play" type="submit" value="play" name="play">
+        <label>Ilość rund:<input class="maxTurns" type="number" min="1" max="50" step="1" value="5" name="maxTurns"></label><br>
+        <label><input class="difficulty" type="radio" value="easy" name="difficulty" required>Łatwy</label>
+        <label><input class="difficulty" type="radio" value="medium" name="difficulty" required>Średni</label>
+        <label><input class="difficulty" type="radio" value="hard" name="difficulty" required>Trudny</label><br>
+        <input class="play" type="submit" value="OK" name="play">
     </form>
 
     <?php

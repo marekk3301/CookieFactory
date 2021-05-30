@@ -41,6 +41,16 @@ function calculateDelay($difficulty) {                                          
     return round($a*pow($b,$_SESSION['turns']),2);
 }
 
+function addPoints($delay) {
+    if ($delay == 0) {
+        $_SESSION['points'] += 500;
+
+    }
+    else {
+        $_SESSION['points'] += (int)((1/$delay)*5);
+    }
+}
+
 function drawBoard($cookie) {                                                   //skladanie calego ciasteczka z obrazkow
     $ciasto = $cookie->getCiasto();
     $polewa = $cookie->getPolewa();
