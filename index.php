@@ -4,12 +4,13 @@ include 'functions.php';
 
 <html lang="">
     <head>
+        <title>Cookie Factory</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
     <form class="start" method="post" action="index.php">
         <h4>CookieFactory.exe</h4>
-        <input class="username" type="text" placeholder="username" name="username"><br>
+        <label><input class="username" type="text" placeholder="username" name="username"><br></label>
         <label>Ilość rund:<input class="maxTurns" type="number" min="1" max="50" step="1" value="5" name="maxTurns"></label><br>
         <label><input class="difficulty" type="radio" value="easy" name="difficulty" required>Łatwy</label>
         <label><input class="difficulty" type="radio" value="medium" name="difficulty" required>Średni</label>

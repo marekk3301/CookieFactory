@@ -1,5 +1,6 @@
 <html lang="">
 <head>
+    <title>Cookie Factory</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>

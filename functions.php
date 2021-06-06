@@ -37,8 +37,7 @@ function calculateDelay($difficulty) {                                          
             $b = 0.87;
             break;
     }
-
-    return round($a*pow($b,$_SESSION['turns']),2);
+    return round($a*pow($b,$_SESSION['turns']+1),2);
 }
 
 function addPoints($delay) {
@@ -51,13 +50,18 @@ function addPoints($delay) {
     }
 }
 
+function calculatePoints($delay) {
+    echo $delay . '<br>';
+    return ((1/$delay)*5);
+}
+
 function drawBoard($cookie) {                                                   //skladanie calego ciasteczka z obrazkow
     $ciasto = $cookie->getCiasto();
     $polewa = $cookie->getPolewa();
     $dodatek = $cookie->getDodatek();
-    echo "<img class='cookieImage' src='cookieBox/$ciasto.png'>";
-    echo "<img class='cookieImage' src='cookieBox/$polewa.png'>";
-    echo "<img class='cookieImage' src='cookieBox/$dodatek.png'>";
+    echo "<img class='cookieImage' src='cookieBox/$ciasto.png' alt='ciasto'>";
+    echo "<img class='cookieImage' src='cookieBox/$polewa.png' alt='polewa'>";
+    echo "<img class='cookieImage' src='cookieBox/$dodatek.png' alt='dodatek'>";
 }
 
 function setNewCookie($cookie) {                                                //zapisywanie ciasteczka w przegladarce
@@ -68,7 +72,6 @@ function setNewCookie($cookie) {                                                
 function compareCookies($order, $cookie) {                                      //porownywanie czy zrobione ciasteczko jest identyczne z zamowieniem
     if ($order == $cookie) {
         $_SESSION['result'] = 1;
-        $_SESSION['points'] += 1;
     }
     else {
         $_SESSION['result'] = 0;

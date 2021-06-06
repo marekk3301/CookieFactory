@@ -20,7 +20,9 @@ $_SESSION['ordered'] = $cookie->toString();
 ?>
 
 <html lang="">
-<head><link rel="stylesheet" href="style.css"></head>
+<head>
+    <title>Cookie Factory</title>
+    <link rel="stylesheet" href="style.css"></head>
 <body>
 
 <div class="board"><div class="shadow"></div><?php drawBoard($cookie)?> </div>
@@ -32,6 +34,5 @@ $_SESSION['ordered'] = $cookie->toString();
 
 
 $delay = calculateDelay($_SESSION['difficulty']);
-//echo $delay;
 
 header( "refresh:$delay;url=game.php" );
